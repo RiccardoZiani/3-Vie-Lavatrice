@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=Cortex-M0+" 
+
+"--fpu=None" 
+
+"-p" 
+
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CONFIG\debugger\NXP\MKE02Z64xxx4.ddf" 
+
+"--semihosting" 
+
+"--device=MKE02Z64xxx4" 
+
+"--pemicro_show_settings_dialog" 
+
+
+
+
