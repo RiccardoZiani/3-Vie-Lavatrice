@@ -220,27 +220,29 @@
 			<F N="board/board.h"/>
 			<F N="board/clock_config.c"/>
 			<F N="board/clock_config.h"/>
+			<F N="board/peripherals.c"/>
+			<F N="board/peripherals.h"/>
 			<F N="board/pin_mux.c"/>
 			<F N="board/pin_mux.h"/>
 		</Folder>
 		<Folder Name="CMSIS">
-			<F N="CMSIS/arm_common_tables.h"/>
-			<F N="CMSIS/arm_const_structs.h"/>
-			<F N="CMSIS/arm_math.h"/>
-			<F N="CMSIS/cmsis_armcc.h"/>
-			<F N="CMSIS/cmsis_armclang.h"/>
 			<F N="CMSIS/cmsis_compiler.h"/>
-			<F N="CMSIS/cmsis_gcc.h"/>
+			<F N="CMSIS/cmsis_iccarm.h"/>
 			<F N="CMSIS/cmsis_version.h"/>
-			<F N="CMSIS/core_armv8mbl.h"/>
-			<F N="CMSIS/core_armv8mml.h"/>
 			<F N="CMSIS/core_cm0plus.h"/>
-			<F N="CMSIS/fsl_device_registers.h"/>
-			<F N="CMSIS/MKE02Z4.h"/>
-			<F N="CMSIS/MKE02Z4_features.h"/>
 			<F N="CMSIS/mpu_armv7.h"/>
-			<F N="CMSIS/system_MKE02Z4.c"/>
-			<F N="CMSIS/system_MKE02Z4.h"/>
+		</Folder>
+		<Folder Name="Debug">
+			<Folder Name="Exe">
+				<F N="Debug/Exe/Valvola 3 Vie Lavatrice.srec"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Device">
+			<F N="Device/fsl_device_registers.h"/>
+			<F N="Device/MKE02Z4.h"/>
+			<F N="Device/MKE02Z4_features.h"/>
+			<F N="Device/system_MKE02Z4.c"/>
+			<F N="Device/system_MKE02Z4.h"/>
 		</Folder>
 		<Folder Name="drivers">
 			<F N="drivers/fsl_acmp.c"/>
@@ -251,6 +253,10 @@
 			<F N="drivers/fsl_clock.h"/>
 			<F N="drivers/fsl_common.c"/>
 			<F N="drivers/fsl_common.h"/>
+			<F N="drivers/fsl_common_arm.c"/>
+			<F N="drivers/fsl_common_arm.h"/>
+			<F N="drivers/fsl_flash.c"/>
+			<F N="drivers/fsl_flash.h"/>
 			<F N="drivers/fsl_ftm.c"/>
 			<F N="drivers/fsl_ftm.h"/>
 			<F N="drivers/fsl_gpio.c"/>
@@ -277,35 +283,9 @@
 			<F N="drivers/fsl_wdog8.h"/>
 		</Folder>
 		<Folder Name="source">
-			<F N="source/autodose.c"/>
-			<F N="source/autodose.h"/>
-			<F N="source/crc.c"/>
-			<F N="source/crc.h"/>
-			<F N="source/crc_hal.c"/>
-			<F N="source/flash.c"/>
-			<F N="source/flash.h"/>
-			<F N="source/grinder.h"/>
-			<F N="source/hal.c"/>
-			<F N="source/hal.h"/>
-			<F N="source/isr.c"/>
-			<F N="source/ke02z40m_test.c"/>
-			<F N="source/micro_counter_hal.c"/>
-			<F N="source/micro_counter_hal.h"/>
-			<F N="source/nvm.c"/>
-			<F N="source/nvm.h"/>
-			<F N="source/nvm_cfg.h"/>
-			<F N="source/nvm_hal.c"/>
-			<F N="source/nvm_hal.h"/>
-			<F N="source/nvm_map.c"/>
-			<F N="source/nvm_map.h"/>
-			<F N="source/philips_types.h"/>
-			<F N="source/ric.c"/>
-			<F N="source/ric.h"/>
-			<F N="source/saeco.h"/>
-			<F N="source/template.c"/>
-			<F N="source/template.h"/>
-			<F N="source/timer.c"/>
-			<F N="source/timer.h"/>
+			<F N="source/switch.c"/>
+			<F N="source/switch.h"/>
+			<F N="source/Valvola 3 Vie Lavatrice.c"/>
 		</Folder>
 		<Folder Name="startup">
 			<F N="startup/startup_MKE02Z4.s"/>
