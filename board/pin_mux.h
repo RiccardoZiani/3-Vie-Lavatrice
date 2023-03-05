@@ -111,6 +111,111 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_Button2_PIN_MASK (1U << 2U)      /*!<@brief PORT pin mask */
                                                         /* @} */
 
+/*! @name PORTF1 (number 42), J9[11]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Led_1_Ora_FGPIO FGPIOB             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_1_Ora_GPIO GPIOB               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_1_Ora_GPIO_PORT kGPIO_PORTF    /*!<@brief PORTB GPIO port: PORTB */
+#define BOARD_INITPINS_Led_1_Ora_GPIO_PIN_MASK (1U << 9U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Led_1_Ora_PORT PORTF               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Led_1_Ora_PIN 1U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Led_1_Ora_PIN_MASK (1U << 1U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
+
+/*! @name PORTF0 (number 43), J9[13]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Led_2_Ora_FGPIO FGPIOB             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_2_Ora_GPIO GPIOB               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_2_Ora_GPIO_PORT kGPIO_PORTF    /*!<@brief PORTB GPIO port: PORTB */
+#define BOARD_INITPINS_Led_2_Ora_GPIO_PIN_MASK (1U << 8U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Led_2_Ora_PORT PORTF               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Led_2_Ora_PIN 0U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Led_2_Ora_PIN_MASK (1U << 0U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
+
+/*! @name PORTG3 (number 55), J9[15]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Led_3_Ora_FGPIO FGPIOB             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_3_Ora_GPIO GPIOB               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_3_Ora_GPIO_PORT kGPIO_PORTG    /*!<@brief PORTB GPIO port: PORTB */
+#define BOARD_INITPINS_Led_3_Ora_GPIO_PIN_MASK (1U << 19U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Led_3_Ora_PORT PORTG               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Led_3_Ora_PIN 3U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Led_3_Ora_PIN_MASK (1U << 3U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
+
+/*! @name PORTE1 (number 59), J9[3]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Led_Fredda_FGPIO FGPIOB             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_Fredda_GPIO GPIOB               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_Fredda_GPIO_PORT kGPIO_PORTE    /*!<@brief PORTB GPIO port: PORTB */
+#define BOARD_INITPINS_Led_Fredda_GPIO_PIN_MASK (1U << 1U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Led_Fredda_PORT PORTE               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Led_Fredda_PIN 1U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Led_Fredda_PIN_MASK (1U << 1U)      /*!<@brief PORT pin mask */
+                                                           /* @} */
+
+/*! @name PORTE0 (number 60), J9[1]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Led_Calda_FGPIO FGPIOB             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_Calda_GPIO GPIOB               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Led_Calda_GPIO_PORT kGPIO_PORTE    /*!<@brief PORTB GPIO port: PORTB */
+#define BOARD_INITPINS_Led_Calda_GPIO_PIN_MASK (1U << 0U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Led_Calda_PORT PORTE               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Led_Calda_PIN 0U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Led_Calda_PIN_MASK (1U << 0U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
+
+/*! @name PORTF7 (number 27), J2[9]/J10[2]/PTF7_A0_ANA0
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Start_Fredda_FGPIO FGPIOB             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Start_Fredda_GPIO GPIOB               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Start_Fredda_GPIO_PORT kGPIO_PORTF    /*!<@brief PORTB GPIO port: PORTB */
+#define BOARD_INITPINS_Start_Fredda_GPIO_PIN_MASK (1U << 15U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Start_Fredda_PORT PORTF               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Start_Fredda_PIN 7U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Start_Fredda_PIN_MASK (1U << 7U)      /*!<@brief PORT pin mask */
+                                                             /* @} */
+
+/*! @name PORTC0 (number 26), J10[4]
+  @{ */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_Start_Calda_FGPIO FGPIOA             /*!<@brief FGPIO peripheral base pointer */
+#define BOARD_INITPINS_Start_Calda_GPIO GPIOA               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_Start_Calda_GPIO_PORT kGPIO_PORTC    /*!<@brief PORTA GPIO port: PORTA */
+#define BOARD_INITPINS_Start_Calda_GPIO_PIN_MASK (1U << 16U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITPINS_Start_Calda_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_Start_Calda_PIN 0U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_Start_Calda_PIN_MASK (1U << 0U)      /*!<@brief PORT pin mask */
+                                                            /* @} */
+
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *

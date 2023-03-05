@@ -261,9 +261,9 @@
 			<member name="size_shift_right" type="sint32">0</member>
 		</object>
 		<object name="ObjId0015" type="CObList">
-			<member name="item0" type="CObject_ptr">ObjId0118</member>
+			<member name="item0" type="CObject_ptr">ObjId0140</member>
 		</object>
-		<object name="ObjId0118" type="CPrjDoc_MapFileInfo">
+		<object name="ObjId0140" type="CPrjDoc_MapFileInfo">
 			<member name="file_name" type="string">.\Valvola 3 vie.out</member>
 			<member name="file_type" type="CObject_ptr">ObjId0089</member>
 		</object>
@@ -294,149 +294,7 @@
 		</object>
 		<object name="ObjId0098" type="CObList"/>
 		<object name="ObjId0099" type="CObList">
-			<member name="item0" type="CObject_ptr">ObjId0121</member>
-			<member name="item1" type="CObject_ptr">ObjId0109</member>
-		</object>
-		<object name="ObjId0121" type="CPrjItemScope">
-			<member name="parent_item" type="CObject_ptr">ObjId0096</member>
-			<member name="tree_expand" type="sint32">1</member>
-			<member name="name" type="string">New Oscilloscope (1)</member>
-			<member name="href" type="string"/>
-			<member name="graph_buffer" type="sint32">10000</member>
-			<member name="graph_type" type="sint32">0</member>
-			<member name="graph_x_units" type="sint32">2</member>
-			<member name="graph_x_label" type="string">Time</member>
-			<member name="graph_x_addunits" type="sint32">1</member>
-			<member name="graph_legend_loc" type="sint32">0</member>
-			<member name="graph_legen_vis" type="sint32">1</member>
-			<member name="graph_legend_inside" type="sint32">1</member>
-			<member name="graph_grid_horz" type="sint32">1</member>
-			<member name="graph_grid_vert" type="sint32">1</member>
-			<member name="graph_x_min" type="real64">0.00000000000000000000e+00</member>
-			<member name="graph_x_max" type="real64">1.00000000000000000000e+02</member>
-			<member name="graph_x_min_auto" type="sint32">1</member>
-			<member name="graph_x_max_auto" type="sint32">1</member>
-			<member name="graph_var_count" type="sint32">1</member>
-			<member name="var_count" type="sint32">1</member>
-			<member name="var0_info" type="CPrjItemRS_VarInfo">ObjId0122</member>
-			<member name="yblock0_info" type="CPrjItemRS_YBlockInfo">ObjId0123</member>
-			<member name="yblock1_info" type="CPrjItemRS_YBlockInfo">ObjId0124</member>
-			<member name="yblock2_info" type="CPrjItemRS_YBlockInfo">ObjId0125</member>
-			<member name="yblock3_info" type="CPrjItemRS_YBlockInfo">ObjId0126</member>
-			<member name="yblock4_info" type="CPrjItemRS_YBlockInfo">ObjId0127</member>
-			<member name="yblock5_info" type="CPrjItemRS_YBlockInfo">ObjId0128</member>
-			<member name="scope_period" type="real64">1.00000000000000005551e-01</member>
-			<member name="scope_x_autoscale" type="sint32">1</member>
-			<member name="scope_x_width" type="real64">1.00000000000000000000e+01</member>
-			<member name="scope_ignore_duplicity" type="sint32">0</member>
-			<sub name="scope_views" length="0"/>
-			<member name="data_capture_mode" type="sint32">0</member>
-			<member name="data_capture_onaction" type="sint32">0</member>
-			<member name="data_capture_file_type" type="sint32">0</member>
-			<member name="data_capture_dir" type="string">C:\Data</member>
-			<member name="data_capture_dir" type="sint32">0</member>
-		</object>
-		<object name="ObjId0122" type="CPrjItemRS_VarInfo">
-			<member name="variable" type="CObject_ptr">ObjId0119</member>
-			<member name="visible" type="sint32">1</member>
-			<member name="y_block" type="sint32">0</member>
-			<member name="color" type="uint32">0x2E2DED</member>
-		</object>
-		<object name="ObjId0123" type="CPrjItemRS_YBlockInfo">
-			<member name="join_class" type="sint32">0</member>
-			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">0</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
-			<member name="raxis_label" type="string">rAxis</member>
-			<member name="raxis_style" type="sint32">0</member>
-			<member name="raxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="raxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="raxis_min_auto" type="sint32">1</member>
-			<member name="raxis_max_auto" type="sint32">1</member>
-			<member name="raxis_subsets" type="sint32">0</member>
-		</object>
-		<object name="ObjId0124" type="CPrjItemRS_YBlockInfo">
-			<member name="join_class" type="sint32">1</member>
-			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">0</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
-			<member name="raxis_label" type="string">rAxis</member>
-			<member name="raxis_style" type="sint32">0</member>
-			<member name="raxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="raxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="raxis_min_auto" type="sint32">1</member>
-			<member name="raxis_max_auto" type="sint32">1</member>
-			<member name="raxis_subsets" type="sint32">0</member>
-		</object>
-		<object name="ObjId0125" type="CPrjItemRS_YBlockInfo">
-			<member name="join_class" type="sint32">2</member>
-			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">0</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
-			<member name="raxis_label" type="string">rAxis</member>
-			<member name="raxis_style" type="sint32">0</member>
-			<member name="raxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="raxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="raxis_min_auto" type="sint32">1</member>
-			<member name="raxis_max_auto" type="sint32">1</member>
-			<member name="raxis_subsets" type="sint32">0</member>
-		</object>
-		<object name="ObjId0126" type="CPrjItemRS_YBlockInfo">
-			<member name="join_class" type="sint32">3</member>
-			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">0</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
-			<member name="raxis_label" type="string">rAxis</member>
-			<member name="raxis_style" type="sint32">0</member>
-			<member name="raxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="raxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="raxis_min_auto" type="sint32">1</member>
-			<member name="raxis_max_auto" type="sint32">1</member>
-			<member name="raxis_subsets" type="sint32">0</member>
-		</object>
-		<object name="ObjId0127" type="CPrjItemRS_YBlockInfo">
-			<member name="join_class" type="sint32">4</member>
-			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">0</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
-			<member name="raxis_label" type="string">rAxis</member>
-			<member name="raxis_style" type="sint32">0</member>
-			<member name="raxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="raxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="raxis_min_auto" type="sint32">1</member>
-			<member name="raxis_max_auto" type="sint32">1</member>
-			<member name="raxis_subsets" type="sint32">0</member>
-		</object>
-		<object name="ObjId0128" type="CPrjItemRS_YBlockInfo">
-			<member name="join_class" type="sint32">5</member>
-			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">0</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
-			<member name="raxis_label" type="string">rAxis</member>
-			<member name="raxis_style" type="sint32">0</member>
-			<member name="raxis_min" type="real64">-1.00000000000000000000e+01</member>
-			<member name="raxis_max" type="real64">1.00000000000000000000e+01</member>
-			<member name="raxis_min_auto" type="sint32">1</member>
-			<member name="raxis_max_auto" type="sint32">1</member>
-			<member name="raxis_subsets" type="sint32">0</member>
+			<member name="item0" type="CObject_ptr">ObjId0109</member>
 		</object>
 		<object name="ObjId0109" type="CPrjItemScope">
 			<member name="parent_item" type="CObject_ptr">ObjId0096</member>
@@ -466,7 +324,7 @@
 			<member name="yblock3_info" type="CPrjItemRS_YBlockInfo">ObjId0113</member>
 			<member name="yblock4_info" type="CPrjItemRS_YBlockInfo">ObjId0114</member>
 			<member name="yblock5_info" type="CPrjItemRS_YBlockInfo">ObjId0115</member>
-			<member name="scope_period" type="real64">1.00000000000000005551e-01</member>
+			<member name="scope_period" type="real64">5.00000000000000010408e-03</member>
 			<member name="scope_x_autoscale" type="sint32">1</member>
 			<member name="scope_x_width" type="real64">1.00000000000000000000e+01</member>
 			<member name="scope_ignore_duplicity" type="sint32">0</member>
@@ -683,7 +541,7 @@
 00000853637265656E4359040000000400380400000011446F636B696E674D616E616765
 722D313001000000001A446F636B696E6750616E65416E6450616E654469766964657273
 03000000E8020000000009000000000000000080000001000000FFFFFFFFFFFFFFFFCB00
-0000A40200007C070000A80200000100000001000010040000000100000012FEFFFFA501
+0000B30300005C090000B70300000100000001000010040000000100000012FEFFFFA501
 0000D98000000000000000000000000000000000000001000000D980000001000000D980
 0000000000000040000000000000FFFFFFFFFFFFFFFF100300003000000014030000C501
 00000000000002000000040000000100000046FEFFFF89010000E4800000000000000000
@@ -693,46 +551,46 @@
 000001000000000000000000000001000000FFFFFFFFA703000007020000AB030000BC02
 000000000000020000000400000000000000000000000000000000000000000000000000
 000001000000E880000001000000E8800000000000000010000001000000FFFFFFFFFFFF
-FFFFC70000003A000000CB000000D8030000010000000200001004000000010000004BFF
+FFFFC70000003A000000CB000000E7040000010000000200001004000000010000004BFF
 FFFFBC06000000000000000000000000000001000000D8800000FFFFFFFF02000000DB80
-0000DC800000FFFF02000B004354616262656450616E650010000001000000020000002C
-020000C9000000F7030000000000000D020000C7000000D8030000000000004014005602
+0000DC800000FFFF02000B004354616262656450616E650010000001000000C212000023
+01000089130000760300000000000094020000C7000000E7040000000000004014005602
 000000144170706C69636174696F6E20436F6D6D616E647301000000DB80000001000000
 FFFFFFFFFFFFFFFF115661726961626C65205374696D756C757301000000DC8000000100
 0000FFFFFFFFFFFFFFFF010000000000000001000000000000000100000001000000FFFF
-FFFF0000000009020000C70000000D0200000100000001000010040000000000000033FE
+FFFF0000000090020000C7000000940200000100000001000010040000000000000033FE
 FFFFC801000000000000000000000000000002000000D8800000FFFFFFFFDB8000000100
 0000FFFFFFFFDB80000001000000D88000000000000000000000000000000012446F636B
 696E674D616E616765722D31303101000000001A446F636B696E6750616E65416E645061
 6E6544697669646572730300000014000000000000000000000000000000000000000000
 000750616E652D2D310100000000024944040000000400FFFFFFFF0F5265637452656365
-6E74466C6F6174030000001000020000002C020000C9000000F703000010526563745265
-63656E74446F636B6564030000001000000000000D020000C7000000D803000014526563
+6E74466C6F6174030000001000C212000023010000891300007603000010526563745265
+63656E74446F636B65640300000010000000000094020000C7000000E704000014526563
 656E744672616D65416C69676E6D656E74040000000400001000000E526563656E74526F
 77496E646578040000000400000000000A4973466C6F6174696E67040000000400000000
 00084D52555769647468040000000400FF7F00000850696E537461746504000000040000
 000000000A50616E652D33323938340100000000024944040000000400D88000000F5265
 6374526563656E74466C6F6174030000001000E2000000F5000000AA010000BD01000010
-52656374526563656E74446F636B6564030000001000000000003A000000C70000000902
+52656374526563656E74446F636B6564030000001000000000003A000000C70000009002
 000014526563656E744672616D65416C69676E6D656E74040000000400001000000E5265
 63656E74526F77496E646578040000000400000000000A4973466C6F6174696E67040000
 00040000000000084D52555769647468040000000400FF7F00000850696E537461746504
 000000040000000000000A50616E652D33323938350100000000024944040000000400D9
 8000000F52656374526563656E74466C6F6174030000001000E2000000F5000000AA0100
-00BD0100001052656374526563656E74446F636B6564030000001000CB000000A8020000
-7C070000D803000014526563656E744672616D65416C69676E6D656E7404000000040000
+00BD0100001052656374526563656E74446F636B6564030000001000CB000000B7030000
+5C090000E704000014526563656E744672616D65416C69676E6D656E7404000000040000
 8000000E526563656E74526F77496E646578040000000400000000000A4973466C6F6174
 696E6704000000040000000000084D52555769647468040000000400FF7F00000850696E
 537461746504000000040000000000000A50616E652D3332393837010000000002494404
 0000000400DB8000000F52656374526563656E74466C6F6174030000001000AE000000CE
 010000AB010000AC0200001052656374526563656E74446F636B65640300000010000400
-00002E020000C3000000B803000014526563656E744672616D65416C69676E6D656E7404
+0000B5020000C3000000C704000014526563656E744672616D65416C69676E6D656E7404
 0000000400001000000E526563656E74526F77496E646578040000000400000000000A49
 73466C6F6174696E6704000000040000000000084D52555769647468040000000400FF7F
 00000850696E537461746504000000040000000000000A50616E652D3332393838010000
 0000024944040000000400DC8000000F52656374526563656E74466C6F61740300000010
 00AE000000CE010000AB010000AC0200001052656374526563656E74446F636B65640300
-00001000040000002E020000C3000000B803000014526563656E744672616D65416C6967
+0000100004000000B5020000C3000000C704000014526563656E744672616D65416C6967
 6E6D656E74040000000400001000000E526563656E74526F77496E646578040000000400
 000000000A4973466C6F6174696E6704000000040000000000084D525557696474680400
 00000400FF7F00000850696E537461746504000000040000000000000A50616E652D3332
@@ -787,14 +645,14 @@ FD0300005402000014526563656E744672616D65416C69676E6D656E7404000000040000
 00084D52555769647468040000000400950000000850696E537461746504000000040000
 000000000A50616E652D35393339330100000000024944040000000400000000000F5265
 6374526563656E74466C6F61740300000010000A0000000A0000006E0000006E00000010
-52656374526563656E74446F636B656403000000100000000000D80300007C070000F103
+52656374526563656E74446F636B656403000000100000000000E70400005C0900000005
 000014526563656E744672616D65416C69676E6D656E74040000000400001000000E5265
 63656E74526F77496E646578040000000400000000000A4973466C6F6174696E67040000
 00040000000000084D52555769647468040000000400FF7F00000850696E537461746504
 000000040000000000000B50616E652D3539333938300100000000024944040000000400
 06E800000F52656374526563656E74466C6F617403000000100047090000330100008D0A
 00005E0100001052656374526563656E74446F636B656403000000100000000000000000
-007C0700001C00000014526563656E744672616D65416C69676E6D656E74040000000400
+005C0900001C00000014526563656E744672616D65416C69676E6D656E74040000000400
 002000000E526563656E74526F77496E646578040000000400000000000A4973466C6F61
 74696E6704000000040000000000084D525557696474680400000004005B000000085069
 6E537461746504000000040000000000000A50616E652D35393634360100000000024944

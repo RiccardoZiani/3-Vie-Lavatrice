@@ -36,6 +36,7 @@ volatile bool Pulsante_press = false;
 volatile uint8_t systick_leds;
 volatile uint32_t systick_ticks;
 volatile uint32_t systick_ticks1;
+volatile uint32_t systick_ticks_counter_ms;
 volatile uint32_t u_sec;
 volatile uint32_t count_tick;
 volatile uint32_t KBI1_ticks;
@@ -67,6 +68,11 @@ void SysTick_Handler(void)
 void SysTick_Handler_relocated(void)
 {
     systick_ticks++;
+    if (systick_ticks_counter_ms)
+    {
+        systick_ticks_counter_ms--;
+    }
+
     if (++systick_ticks1 == 200)
     {
         if (systick_leds == 0)  
@@ -180,6 +186,22 @@ int main(void)
     NVIC_SetPriority(SysTick_IRQn, 0x02U);
 
     SWITCH_init();
+    systick_ticks_counter_ms = 1000;
+    GPIO_PortSet(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);
+    GPIO_PortSet(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+    GPIO_PortSet(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+
+    GPIO_PortSet(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
+    GPIO_PortSet(BOARD_INITPINS_Led_Calda_GPIO_PORT, BOARD_INITPINS_Led_Calda_PIN_MASK);
+    while (systick_ticks_counter_ms);
+
+/** GPIO_PortClear(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);*/
+    GPIO_PortClear(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+    GPIO_PortClear(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+
+/** GPIO_PortClear(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);*/
+    GPIO_PortClear(BOARD_INITPINS_Led_Calda_GPIO_PORT,  BOARD_INITPINS_Led_Calda_PIN_MASK);
+
 
     while (1)
     {
@@ -196,5 +218,8 @@ int main(void)
             Button2_rising_edges++;
         }
     }
+
+
+
 }
 

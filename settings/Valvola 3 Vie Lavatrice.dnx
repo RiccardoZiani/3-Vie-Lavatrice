@@ -23,7 +23,7 @@
         <CStepIntDis>_ 0</CStepIntDis>
     </JLinkDriver>
     <DebugChecksum>
-        <Checksum>35722976</Checksum>
+        <Checksum>1020191982</Checksum>
     </DebugChecksum>
     <Jet>
         <DisableInterrupts>0</DisableInterrupts>
@@ -35,7 +35,7 @@
     </FlashMemory>
     <PEMicroDriver>
         <CStepIntDis>_ 0</CStepIntDis>
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <LeaveTargetRunning>_ 1</LeaveTargetRunning>
     </PEMicroDriver>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>

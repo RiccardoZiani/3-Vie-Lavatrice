@@ -16,10 +16,16 @@ board: FRDM-KE02Z40M
 external_user_signals: {}
 pin_labels:
 - {pin_num: '16', pin_signal: PTE6, label: 'J1[13]'}
+- {pin_num: '26', pin_signal: PTC0/FTM2_CH0/ADC0_SE8, label: 'J10[4]', identifier: Start_Calda}
+- {pin_num: '27', pin_signal: PTF7/ADC0_SE15, label: 'J2[9]/J10[2]/PTF7_A0_ANA0', identifier: Start_Fredda}
+- {pin_num: '42', pin_signal: PTF1, label: 'J9[11]', identifier: Led_1_Ora}
+- {pin_num: '43', pin_signal: PTF0, label: 'J9[13]', identifier: Led_2_Ora}
 - {pin_num: '46', pin_signal: PTD2/KBI1_P2/SPI1_MISO, label: 'J9[9]', identifier: Pulsante}
 - {pin_num: '53', pin_signal: PTE3/SPI0_PCS0, label: 'J9[7]', identifier: Button1}
 - {pin_num: '54', pin_signal: PTE2/SPI0_MISO, label: 'J9[5]', identifier: Button2}
-- {pin_num: '55', pin_signal: PTG3, label: 'J9[15]'}
+- {pin_num: '55', pin_signal: PTG3, label: 'J9[15]', identifier: Led_3_Ora}
+- {pin_num: '59', pin_signal: PTE1/SPI0_MOSI, label: 'J9[3]', identifier: Led_Fredda}
+- {pin_num: '60', pin_signal: PTE0/SPI0_SCK/FTM1_CLK, label: 'J9[1]', identifier: Led_Calda}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -53,6 +59,13 @@ BOARD_InitPins:
   - {pin_num: '14', peripheral: GPIOB, signal: 'GPIO, 25', pin_signal: PTH1/FTM2_CH1, direction: OUTPUT, gpio_init_state: 'true', high_drive_enable: disable}
   - {pin_num: '53', peripheral: GPIOB, signal: 'GPIO, 3', pin_signal: PTE3/SPI0_PCS0, direction: INPUT, pullup_enable: enable, filter_selection: no_init}
   - {pin_num: '54', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: PTE2/SPI0_MISO, direction: INPUT, pullup_enable: enable, filter_selection: no_init}
+  - {pin_num: '42', peripheral: GPIOB, signal: 'GPIO, 9', pin_signal: PTF1, direction: OUTPUT}
+  - {pin_num: '43', peripheral: GPIOB, signal: 'GPIO, 8', pin_signal: PTF0, direction: OUTPUT}
+  - {pin_num: '55', peripheral: GPIOB, signal: 'GPIO, 19', pin_signal: PTG3, direction: OUTPUT}
+  - {pin_num: '59', peripheral: GPIOB, signal: 'GPIO, 1', pin_signal: PTE1/SPI0_MOSI, direction: OUTPUT, high_drive_enable: disable}
+  - {pin_num: '60', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: PTE0/SPI0_SCK/FTM1_CLK, direction: OUTPUT}
+  - {pin_num: '27', peripheral: GPIOB, signal: 'GPIO, 15', pin_signal: PTF7/ADC0_SE15, direction: OUTPUT, gpio_init_state: 'false'}
+  - {pin_num: '26', peripheral: GPIOA, signal: 'GPIO, 16', pin_signal: PTC0/FTM2_CH0/ADC0_SE8, direction: OUTPUT}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -65,6 +78,27 @@ BOARD_InitPins:
  * END ****************************************************************************************************************/
 void BOARD_InitPins(void)
 {
+
+    gpio_pin_config_t Start_Calda_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTA16 (pin 26) */
+    GPIO_PinInit(BOARD_INITPINS_Start_Calda_GPIO_PORT, BOARD_INITPINS_Start_Calda_PIN, &Start_Calda_config);
+
+    gpio_pin_config_t Led_Calda_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB0 (pin 60) */
+    GPIO_PinInit(BOARD_INITPINS_Led_Calda_GPIO_PORT, BOARD_INITPINS_Led_Calda_PIN, &Led_Calda_config);
+
+    gpio_pin_config_t Led_Fredda_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB1 (pin 59) */
+    GPIO_PinInit(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN, &Led_Fredda_config);
 
     gpio_pin_config_t Button2_config = {
         .pinDirection = kGPIO_DigitalInput,
@@ -87,6 +121,34 @@ void BOARD_InitPins(void)
     /* Initialize GPIO functionality on pin PTB7 (pin 5) */
     GPIO_PinInit(BOARD_INITPINS_PTE7_BLUE_GPIO_PORT, BOARD_INITPINS_PTE7_BLUE_PIN, &PTE7_BLUE_config);
 
+    gpio_pin_config_t Led_2_Ora_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB8 (pin 43) */
+    GPIO_PinInit(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_2_Ora_PIN, &Led_2_Ora_config);
+
+    gpio_pin_config_t Led_1_Ora_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB9 (pin 42) */
+    GPIO_PinInit(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN, &Led_1_Ora_config);
+
+    gpio_pin_config_t Start_Fredda_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB15 (pin 27) */
+    GPIO_PinInit(BOARD_INITPINS_Start_Fredda_GPIO_PORT, BOARD_INITPINS_Start_Fredda_PIN, &Start_Fredda_config);
+
+    gpio_pin_config_t Led_3_Ora_config = {
+        .pinDirection = kGPIO_DigitalOutput,
+        .outputLogic = 0U
+    };
+    /* Initialize GPIO functionality on pin PTB19 (pin 55) */
+    GPIO_PinInit(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN, &Led_3_Ora_config);
+
     gpio_pin_config_t PTH1_RED_config = {
         .pinDirection = kGPIO_DigitalOutput,
         .outputLogic = 1U
@@ -100,6 +162,8 @@ void BOARD_InitPins(void)
     };
     /* Initialize GPIO functionality on pin PTB26 (pin 6) */
     GPIO_PinInit(BOARD_INITPINS_PTH2_GREEN_GPIO_PORT, BOARD_INITPINS_PTH2_GREEN_PIN, &PTH2_GREEN_config);
+    /* High Current Drive Capability of PTE1: 0x00u */
+    PORT_SetHighDriveEnable(PORT, kPORT_HighDrive_PTE1, false);
     /* High Current Drive Capability of PTH1: 0x00u */
     PORT_SetHighDriveEnable(PORT, kPORT_HighDrive_PTH1, false);
     /* Filter Selection for Input from KBI1: 0x03u */
