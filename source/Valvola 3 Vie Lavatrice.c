@@ -18,6 +18,22 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
+#define SYSTICK_1_SECOND        1000    // mseconds..
+#define SYSTICK_2_SECONDS       2000    // mseconds..
+#define TIMEOUT_VALVE_MOTOR_ON  10000   // mseconds..
+#define TIMEOUT_CALDA_1_ORA     3600    // seconds..
+#define TIMEOUT_CALDA_2_ORE     7200    // seconds..
+#define TIMEOUT_CALDA_3_ORE     10800   // seconds..
+
+typedef enum
+{
+    STATE_FREDDA,
+    STATE_CALDA_1_ORA,
+    STATE_CALDA_2_ORE,
+    STATE_CALDA_3_ORE,
+    N_STATE_CALDA_STATES,
+} STATE_ACQUA_t;
+
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
@@ -36,7 +52,7 @@ volatile bool Pulsante_press = false;
 volatile uint8_t systick_leds;
 volatile uint32_t systick_ticks;
 volatile uint32_t systick_ticks1;
-volatile uint32_t systick_ticks_counter_ms;
+volatile uint32_t systick_ticks_counter_ms = SYSTICK_1_SECOND;
 volatile uint32_t u_sec;
 volatile uint32_t count_tick;
 volatile uint32_t KBI1_ticks;
@@ -45,6 +61,13 @@ volatile uint32_t Button2_rising_edges;
 volatile bool Button1_pressed = false;
 volatile bool Button2_pressed = false;
 
+volatile uint32_t valve_motor_activity_counter_ms;
+volatile uint32_t calda_activity_counter_ms = TIMEOUT_CALDA_1_ORA;
+volatile bool valve_motor_state = false;
+volatile bool Timeout_Calda_Active = true;
+
+
+STATE_ACQUA_t state_acqua;
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -72,6 +95,47 @@ void SysTick_Handler_relocated(void)
     {
         systick_ticks_counter_ms--;
     }
+    else
+    {   // 1 Second...
+        systick_ticks_counter_ms = SYSTICK_1_SECOND;
+        if (calda_activity_counter_ms == 0)
+        {
+            if (Timeout_Calda_Active == true)
+            {
+                Timeout_Calda_Active = false;           
+                GPIO_PortClear(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);
+                GPIO_PortClear(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_2_Ora_PIN_MASK);
+                GPIO_PortClear(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+
+                GPIO_PortClear(BOARD_INITPINS_Led_Calda_GPIO_PORT, BOARD_INITPINS_Led_Calda_PIN_MASK);
+                GPIO_PortSet(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
+
+                GPIO_PortClear(BOARD_INITPINS_Start_Calda_GPIO_PORT, BOARD_INITPINS_Start_Calda_PIN_MASK);
+                valve_motor_state = true;
+                valve_motor_activity_counter_ms = TIMEOUT_VALVE_MOTOR_ON;
+                GPIO_PortSet(BOARD_INITPINS_Start_Fredda_GPIO_PORT, BOARD_INITPINS_Start_Fredda_PIN_MASK);
+
+                calda_activity_counter_ms = 0;
+                state_acqua = STATE_FREDDA;
+            }
+        }
+        else
+        {
+            calda_activity_counter_ms--;
+        }
+    }
+
+    if (valve_motor_activity_counter_ms)
+    {
+        valve_motor_activity_counter_ms--;
+    }
+    else if (valve_motor_state == true)
+    {
+        valve_motor_state = false;
+        GPIO_PortClear(BOARD_INITPINS_Start_Calda_GPIO_PORT, BOARD_INITPINS_Start_Calda_PIN_MASK);
+        GPIO_PortClear(BOARD_INITPINS_Start_Fredda_GPIO_PORT, BOARD_INITPINS_Start_Fredda_PIN_MASK);
+    }
+
 
     if (++systick_ticks1 == 200)
     {
@@ -141,6 +205,7 @@ void delay(void)
     }
 }
 
+
 /*!
  * @brief Main function
  */
@@ -186,9 +251,14 @@ int main(void)
     NVIC_SetPriority(SysTick_IRQn, 0x02U);
 
     SWITCH_init();
-    systick_ticks_counter_ms = 1000;
+    systick_ticks_counter_ms = SYSTICK_2_SECONDS;
+
+    valve_motor_state = true;
+    valve_motor_activity_counter_ms = TIMEOUT_VALVE_MOTOR_ON;
+    GPIO_PortSet(BOARD_INITPINS_Start_Calda_GPIO_PORT, BOARD_INITPINS_Start_Calda_PIN_MASK);
+
     GPIO_PortSet(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);
-    GPIO_PortSet(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+    GPIO_PortSet(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_2_Ora_PIN_MASK);
     GPIO_PortSet(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
 
     GPIO_PortSet(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
@@ -196,15 +266,17 @@ int main(void)
     while (systick_ticks_counter_ms);
 
 /** GPIO_PortClear(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);*/
-    GPIO_PortClear(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+    GPIO_PortClear(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_2_Ora_PIN_MASK);
     GPIO_PortClear(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
 
-/** GPIO_PortClear(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);*/
-    GPIO_PortClear(BOARD_INITPINS_Led_Calda_GPIO_PORT,  BOARD_INITPINS_Led_Calda_PIN_MASK);
+    GPIO_PortClear(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
+/** GPIO_PortClear(BOARD_INITPINS_Led_Calda_GPIO_PORT,  BOARD_INITPINS_Led_Calda_PIN_MASK);*/
+    state_acqua = STATE_CALDA_1_ORA;
 
 
     while (1)
     {
+#if 0
         delay();
         count_tick =  USEC_TO_COUNT(systick_ticks*1000, SystemCoreClock);
         if (Button1_pressed)
@@ -217,9 +289,69 @@ int main(void)
             Button2_pressed = false;
             Button2_rising_edges++;
         }
+#endif
+
+        switch (state_acqua)
+        {
+            case STATE_FREDDA:
+                if (Pulsante_press == true)
+                {
+                    Pulsante_press = false;
+                    GPIO_PortClear(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
+                    GPIO_PortSet(BOARD_INITPINS_Led_Calda_GPIO_PORT, BOARD_INITPINS_Led_Calda_PIN_MASK);
+                    GPIO_PortSet(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);
+
+                    GPIO_PortClear(BOARD_INITPINS_Start_Fredda_GPIO_PORT, BOARD_INITPINS_Start_Fredda_PIN_MASK);
+                    valve_motor_state = true;
+                    valve_motor_activity_counter_ms = TIMEOUT_VALVE_MOTOR_ON;
+                    GPIO_PortSet(BOARD_INITPINS_Start_Calda_GPIO_PORT, BOARD_INITPINS_Start_Calda_PIN_MASK);
+                    calda_activity_counter_ms = TIMEOUT_CALDA_1_ORA;
+                    state_acqua = STATE_CALDA_1_ORA;
+                    Timeout_Calda_Active = true;
+                }
+                break;
+
+            case STATE_CALDA_1_ORA:
+                if (Pulsante_press == true)
+                {
+                    Pulsante_press = false;
+                    GPIO_PortSet(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_2_Ora_PIN_MASK);
+                    calda_activity_counter_ms = TIMEOUT_CALDA_2_ORE;
+                    state_acqua = STATE_CALDA_2_ORE;
+                }
+                break;
+
+            case STATE_CALDA_2_ORE:
+                if (Pulsante_press == true)
+                {
+                    Pulsante_press = false;
+                    GPIO_PortSet(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+                    calda_activity_counter_ms = TIMEOUT_CALDA_3_ORE;
+                    state_acqua = STATE_CALDA_3_ORE;
+                }
+                break;
+
+            case STATE_CALDA_3_ORE:
+                if (Pulsante_press == true)
+                {
+                    Pulsante_press = false;
+                    GPIO_PortClear(BOARD_INITPINS_Led_1_Ora_GPIO_PORT, BOARD_INITPINS_Led_1_Ora_PIN_MASK);
+                    GPIO_PortClear(BOARD_INITPINS_Led_2_Ora_GPIO_PORT, BOARD_INITPINS_Led_2_Ora_PIN_MASK);
+                    GPIO_PortClear(BOARD_INITPINS_Led_3_Ora_GPIO_PORT, BOARD_INITPINS_Led_3_Ora_PIN_MASK);
+
+                    GPIO_PortClear(BOARD_INITPINS_Led_Calda_GPIO_PORT, BOARD_INITPINS_Led_Calda_PIN_MASK);
+                    GPIO_PortSet(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
+
+                    GPIO_PortClear(BOARD_INITPINS_Start_Calda_GPIO_PORT, BOARD_INITPINS_Start_Calda_PIN_MASK);
+                    valve_motor_state = true;
+                    valve_motor_activity_counter_ms = TIMEOUT_VALVE_MOTOR_ON;
+                    GPIO_PortSet(BOARD_INITPINS_Start_Fredda_GPIO_PORT, BOARD_INITPINS_Start_Fredda_PIN_MASK);
+
+                    calda_activity_counter_ms = 0;
+                    state_acqua = STATE_FREDDA;
+                }
+                break;
+        }
     }
-
-
-
 }
 

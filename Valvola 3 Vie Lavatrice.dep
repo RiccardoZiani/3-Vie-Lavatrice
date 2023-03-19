@@ -5,133 +5,101 @@
     <configuration>
         <name>debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\obj\source\switch.o</file>
+            <file>$PROJ_DIR$\Debug\obj\startup\startup_MKE02Z4.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\Valvola 3 Vie Lavatrice.srec</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
             <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
-            <file>$PROJ_DIR$\board\clock_config.h</file>
-            <file>$PROJ_DIR$\Debug\obj\board\board.o</file>
-            <file>$PROJ_DIR$\CMSIS\mpu_armv7.h</file>
-            <file>$PROJ_DIR$\board\board.c</file>
-            <file>$PROJ_DIR$\Device\fsl_device_registers.h</file>
-            <file>$PROJ_DIR$\MKE02Z64xxx4_flash.icf</file>
-            <file>$PROJ_DIR$\board\clock_config.c</file>
-            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_common.h</file>
-            <file>$PROJ_DIR$\board\pin_mux.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_common_arm.c</file>
-            <file>$PROJ_DIR$\Device\MKE02Z4.h</file>
-            <file>$PROJ_DIR$\Device\system_MKE02Z4.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_gpio.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_kbi.h</file>
-            <file>$PROJ_DIR$\Device\MKE02Z4_features.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_clock.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_port.h</file>
-            <file>$PROJ_DIR$\source\switch.h</file>
-            <file>$PROJ_DIR$\source\Valvola 3 Vie Lavatrice.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_gpio.o</file>
-            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_port.o</file>
-            <file>$PROJ_DIR$\CMSIS\cmsis_iccarm.h</file>
-            <file>$PROJ_DIR$\board\board.h</file>
-            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_kbi.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_port.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_common_arm.h</file>
-            <file>$PROJ_DIR$\startup\startup_MKE02Z4.s</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
             <file>$PROJ_DIR$\Debug\obj\drivers\fsl_kbi.o</file>
-            <file>$PROJ_DIR$\board\pin_mux.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
-            <file>$PROJ_DIR$\source\switch.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
             <file>$PROJ_DIR$\Debug\obj\drivers\fsl_common.o</file>
-            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_clock.o</file>
-            <file>$PROJ_DIR$\Debug\obj\source\Valvola 3 Vie Lavatrice.o</file>
-            <file>$PROJ_DIR$\Device\system_MKE02Z4.c</file>
-            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\CMSIS\core_cm0plus.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\obj\board\board.o</file>
+            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_clock.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
             <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$PROJ_DIR$\utilities\fsl_debug_console.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$PROJ_DIR$\Debug\obj\device\system_MKE02Z4.o</file>
-            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_common_arm.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\Debug\Exe\Valvola 3 vie.out</file>
             <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.h</file>
             <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_common_arm.o</file>
+            <file>$PROJ_DIR$\Debug\obj\board\clock_config.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_gpio.o</file>
+            <file>$PROJ_DIR$\Debug\obj\source\Valvola 3 Vie Lavatrice.o</file>
+            <file>$PROJ_DIR$\Debug\obj\device\system_MKE02Z4.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\Valvola 3 vie.out</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
             <file>$PROJ_DIR$\Debug\obj\board\pin_mux.o</file>
             <file>$PROJ_DIR$\Debug\list\Valvola 3 vie.map</file>
+            <file>$PROJ_DIR$\Debug\obj\drivers\fsl_port.o</file>
             <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\Debug\obj\board\clock_config.o</file>
-            <file>$PROJ_DIR$\Debug\Exe\Valvola 3 Vie Lavatrice.srec</file>
-            <file>$PROJ_DIR$\Debug\obj\startup\startup_MKE02Z4.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\Debug\obj\source\switch.o</file>
+            <file>$PROJ_DIR$\Device\MKE02Z4.h</file>
+            <file>$PROJ_DIR$\Device\MKE02Z4_features.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
+            <file>$PROJ_DIR$\board\clock_config.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\source\Valvola 3 Vie Lavatrice.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_common_arm.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\Device\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\Device\system_MKE02Z4.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_common_arm.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_port.h</file>
+            <file>$PROJ_DIR$\board\clock_config.c</file>
+            <file>$PROJ_DIR$\Device\system_MKE02Z4.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_kbi.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_kbi.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_port.c</file>
+            <file>$PROJ_DIR$\startup\startup_MKE02Z4.s</file>
+            <file>$PROJ_DIR$\MKE02Z64xxx4_flash.icf</file>
+            <file>$PROJ_DIR$\CMSIS\core_cm0plus.h</file>
+            <file>$PROJ_DIR$\source\switch.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\source\switch.c</file>
+            <file>$PROJ_DIR$\board\pin_mux.c</file>
+            <file>$PROJ_DIR$\board\pin_mux.h</file>
+            <file>$PROJ_DIR$\CMSIS\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\board\board.c</file>
+            <file>$PROJ_DIR$\board\board.h</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\board\board.c</name>
+            <name>$PROJ_DIR$\Debug\Exe\Valvola 3 Vie Lavatrice.srec</name>
+            <inputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\Valvola 3 vie.out</name>
             <outputs>
                 <tool>
-                    <name>ICCARM</name>
+                    <name>ILINK</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
                     <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ICCARM</name>
-                    <file> 66 62 49 67 39 48 11 59 58 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20 50 28 2 16</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\board\clock_config.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 63</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_common.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 40</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_common_arm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 53</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20</file>
+                    <name>ILINK</name>
+                    <file> 59 10 20 11 8 19 24 6 33 31 2 1 26 25 18 15 23 5</file>
                 </tool>
             </inputs>
         </file>
@@ -140,87 +108,18 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 41</file>
+                    <file> 11</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 20 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32</file>
+                    <file> 53 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41</file>
                 </tool>
             </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\source\Valvola 3 Vie Lavatrice.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 42</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12 2 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20 16 21 17 22</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_kbi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 35</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 17 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_port.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 26</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 21 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startup\startup_MKE02Z4.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 65</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\board\pin_mux.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 60</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20 21 16 12</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_gpio.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -230,22 +129,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 16 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\source\switch.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 68</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 22 11 59 62 49 67 39 48 58 66 24 34 51 0 47 54 6 14 46 29 44 27 45 15 18 32 20 12 16</file>
+                    <file> 65 38 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53 49 50 56 61</file>
                 </tool>
             </inputs>
         </file>
@@ -254,41 +138,157 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 52</file>
+                    <file> 26</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 66 62 49 67 39 48 6 14 46 29 44 27 45 15 18</file>
+                    <file> 0 34 14 4 13 9 44 35 60 39 43 42 12 52 36</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\Valvola 3 vie.out</name>
+            <name>$PROJ_DIR$\drivers\fsl_common_arm.c</name>
             <outputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 61</file>
-                </tool>
-                <tool>
-                    <name>OBJCOPY</name>
-                    <file> 64</file>
+                    <name>ICCARM</name>
+                    <file> 19</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 7 3 63 41 40 53 25 35 26 60 65 68 52 42 55 57 9 1</file>
+                    <name>ICCARM</name>
+                    <file> 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\Valvola 3 Vie Lavatrice.srec</name>
+            <name>$PROJ_DIR$\drivers\fsl_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+            </outputs>
             <inputs>
                 <tool>
-                    <name>OBJCOPY</name>
-                    <file> 56</file>
+                    <name>ICCARM</name>
+                    <file> 49 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\clock_config.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_kbi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 56 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup\startup_MKE02Z4.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\switch.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 1</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53 65 49</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\pin_mux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 17 34 14 4 13 9 29 0 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53 50 49 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\board\board.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 10</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 34 14 4 13 9 46 17 29 7 21 27 62 22 30 44 35 60 39 43 42 12 52 36 41 53 16 68 38 49</file>
                 </tool>
             </inputs>
         </file>
@@ -297,7 +297,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 56 61</file>
+                    <file> 28 32</file>
                 </tool>
             </outputs>
         </file>
