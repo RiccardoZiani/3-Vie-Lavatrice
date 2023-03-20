@@ -18,12 +18,12 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-#define SYSTICK_1_SECOND        1000    // mseconds..
-#define SYSTICK_2_SECONDS       2000    // mseconds..
-#define TIMEOUT_VALVE_MOTOR_ON  10000   // mseconds..
-#define TIMEOUT_CALDA_1_ORA     3600    // seconds..
-#define TIMEOUT_CALDA_2_ORE     7200    // seconds..
-#define TIMEOUT_CALDA_3_ORE     10800   // seconds..
+#define SYSTICK_1_SECOND        1000    // mseconds
+#define SYSTICK_3_SECONDS       3000    // mseconds
+#define TIMEOUT_VALVE_MOTOR_ON  12000   // mseconds
+#define TIMEOUT_CALDA_1_ORA     2700    // 45 minuti.
+#define TIMEOUT_CALDA_2_ORE     6300    // 1 ora e 45 minuti.
+#define TIMEOUT_CALDA_3_ORE     9900    // 2 ore e 45 minuti.
 
 typedef enum
 {
@@ -251,7 +251,7 @@ int main(void)
     NVIC_SetPriority(SysTick_IRQn, 0x02U);
 
     SWITCH_init();
-    systick_ticks_counter_ms = SYSTICK_2_SECONDS;
+    systick_ticks_counter_ms = SYSTICK_3_SECONDS;
 
     valve_motor_state = true;
     valve_motor_activity_counter_ms = TIMEOUT_VALVE_MOTOR_ON;
