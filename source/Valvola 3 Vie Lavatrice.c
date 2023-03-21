@@ -223,7 +223,7 @@ int main(void)
 
     kbiConfig.mode        = kKBI_EdgesDetect;
     kbiConfig.pinsEnabled = 1 << 2;
-    kbiConfig.pinsEdge    = 0 << 2; /* falling edge.*/
+    kbiConfig.pinsEdge    = 1 << 2; /* rising edge.*/
     KBI_Init(KBI1, &kbiConfig);
     KBI_ClearInterruptFlag(KBI1);
     NVIC_SetPriority(KBI1_IRQn, 0x03U);
@@ -271,7 +271,9 @@ int main(void)
 
     GPIO_PortClear(BOARD_INITPINS_Led_Fredda_GPIO_PORT, BOARD_INITPINS_Led_Fredda_PIN_MASK);
 /** GPIO_PortClear(BOARD_INITPINS_Led_Calda_GPIO_PORT,  BOARD_INITPINS_Led_Calda_PIN_MASK);*/
+    Pulsante_press = false;
     state_acqua = STATE_CALDA_1_ORA;
+
 
 
     while (1)
