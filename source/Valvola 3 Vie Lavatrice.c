@@ -1,8 +1,6 @@
 /*
- * Copyright 2017, NXP
+ * Copyright 2023, riccardo
  * All rights reserved.
- *
- * SPDX-License-Identifier: BSD-3-Clause
  */
 
 #include "pin_mux.h"
@@ -12,7 +10,8 @@
 #include "fsl_kbi.h"
 #include "switch.h"
 
-
+// Verions
+// V00 prima versione funzionante su Lavatrice
 
 
 /*******************************************************************************
