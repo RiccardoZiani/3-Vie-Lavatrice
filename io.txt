@@ -1,0 +1,11 @@
+I have been working for this company for more than 20 years.
+I have worked for this company since the 90s.
+I've been working at this company since before Philips bought it since it was called Saeco
+I mainly deal with low level hardware and firmware projects. I deal with the implementation of new microcontroller platforms
+ and the development of all the hw/sw components for the introduction of new MCUs
+My work can be said to lie somewhere between pure hardware and the sw level of management of coffee machines.
+Usually in the implementation of new platforms I deal with low-level porting during the introduction of new MCUs
+
+
+
+I have to use usb key to transfer data from and to electronic lab equipment(oscilloscopes, themal cam ecc..)
