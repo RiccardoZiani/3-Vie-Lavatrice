@@ -6,7 +6,7 @@
 
 "-p" 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CONFIG\debugger\NXP\MKE02Z64xxx4.ddf" 
+"P:\IAR Systems\Embedded Workbench 9.1\arm\CONFIG\debugger\NXP\MKE02Z64xxx4.ddf" 
 
 "--semihosting" 
 

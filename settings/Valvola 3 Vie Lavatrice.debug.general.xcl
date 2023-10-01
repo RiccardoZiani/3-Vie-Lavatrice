@@ -1,14 +1,14 @@
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\bin\armPROC.dll" 
+"P:\IAR Systems\Embedded Workbench 9.1\arm\bin\armPROC.dll" 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\bin\armJLINK.dll" 
+"P:\IAR Systems\Embedded Workbench 9.1\arm\bin\armJLINK.dll" 
 
-"C:\Data\Sources\3-Vie-Lavatrice.git\debug\Exe\Valvola 3 vie.out" 
+"J:\Sources\3-Vie-Lavatrice.git\trunk\debug\Exe\Valvola 3 vie.out" 
 
---plugin="C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\bin\armbat.dll" 
+--plugin="P:\IAR Systems\Embedded Workbench 9.1\arm\bin\armbat.dll" 
 
---device_macro="C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm/config/debugger/NXP/KExx.dmac" 
+--device_macro="P:\IAR Systems\Embedded Workbench 9.1\arm/config/debugger/NXP/KExx.dmac" 
 
---flash_loader="C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm/config/flashloader/NXP/FlashKE0x64K.board" 
+--flash_loader="P:\IAR Systems\Embedded Workbench 9.1\arm/config/flashloader/NXP/FlashKE0x64K.board" 
 
 
 

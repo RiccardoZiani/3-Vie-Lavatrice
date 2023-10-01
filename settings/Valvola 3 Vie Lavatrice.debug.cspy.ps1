@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Data\Sources\3-Vie-Lavatrice.git\settings\Valvola 3 Vie Lavatrice.debug.general.xcl" --backend -f "C:\Data\Sources\3-Vie-Lavatrice.git\settings\Valvola 3 Vie Lavatrice.debug.driver.xcl" 
+& "P:\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "J:\Sources\3-Vie-Lavatrice.git\trunk\settings\Valvola 3 Vie Lavatrice.debug.general.xcl" --backend -f "J:\Sources\3-Vie-Lavatrice.git\trunk\settings\Valvola 3 Vie Lavatrice.debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Data\Sources\3-Vie-Lavatrice.git\settings\Valvola 3 Vie Lavatrice.debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Data\Sources\3-Vie-Lavatrice.git\settings\Valvola 3 Vie Lavatrice.debug.driver.xcl" 
+& "P:\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "J:\Sources\3-Vie-Lavatrice.git\trunk\settings\Valvola 3 Vie Lavatrice.debug.general.xcl" --debug_file=$debugfile --backend -f "J:\Sources\3-Vie-Lavatrice.git\trunk\settings\Valvola 3 Vie Lavatrice.debug.driver.xcl" 
 }
